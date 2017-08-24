@@ -1,11 +1,73 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      Vendor 1
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+
+    <ion-item *ngFor="let task of tasks | async">
+    <h2>{{task.Name}}</h2>
+    <ion-list>
+    <br>
+       Name: <input type="text" [(ngModel)]="task.Name" block>
+       <br>
+       <button ion-button (click)="updateName(task.$key, task.Name)" block icon-start> <ion-icon name="md-checkmark"></ion-icon>
+        Update
+      </button>
+    </ion-list>
+
+    <ion-list>
+       Status: <input type="text" [(ngModel)]="task.Status" block>
+       <br>
+       <button ion-button (click)="updateStatus(task.$key, task.Status)" block icon-start> <ion-icon name="md-checkmark"></ion-icon>
+        Update
+      </button>
+    </ion-list>
+    
+    <ion-list>
+       Becha: <input type="text" [(ngModel)]="task.Becha" block>
+       <br>
+       <button ion-button (click)="updateBecha(task.$key, task.Becha)" block icon-start> <ion-icon name="md-checkmark"></ion-icon>
+        Update
+      </button>
+    </ion-list>
+
+    <ion-list>
+       Fixie: <input type="text" [(ngModel)]="task.Fixie" block>
+       <br>
+       <button ion-button (click)="updateFixie(task.$key, task.Fixie)" block icon-start> <ion-icon name="md-checkmark"></ion-icon>
+        Update
+      </button>
+    </ion-list>
+
+    <ion-list>
+       Kids: <input type="text" [(ngModel)]="task.Kids" block>
+       <br>
+       <button ion-button (click)="updateKids(task.$key, task.Kids)" block icon-start> <ion-icon name="md-checkmark"></ion-icon>
+        Update
+      </button>
+    </ion-list>
+
+    <ion-list>
+       Mountain: <input type="text" [(ngModel)]="task.Mountain" block>
+       <br>
+       <button ion-button (click)="updateMountain(task.$key, task.Mountain)" block icon-start> <ion-icon name="md-checkmark"></ion-icon>
+        Update
+      </button>
+    </ion-list>
+
+    <ion-list>
+       Road: <input type="text" [(ngModel)]="task.Road" block>
+       <br>
+       <button ion-button (click)="updateRoad(task.$key, task.Road)" block icon-start> <ion-icon name="md-checkmark"></ion-icon>
+        Update
+      </button>
+    </ion-list>
+
+    </ion-item>
 
 </ion-content>
+
