@@ -25,32 +25,32 @@ tasks: FirebaseListObservable<any[]>;
 
    updateFixie(key, fixie) {
     this.tasks.update(key, {Fixie: fixie});
-    this.showAlert();
+
       }
 
     updateKids(key, kids) {
     this.tasks.update(key, {Kids: kids});
-    this.showAlert();
+    
       }
 
    updateMountain(key, mountain) {
     this.tasks.update(key, {Mountain: mountain});
-    this.showAlert();
+    
       }
 
     updateName(key, name) {
     this.tasks.update(key, {Name: name});
-    this.showAlert();
+    
       }
 
     updateRoad(key, road) {
     this.tasks.update(key, {Road: road});
-    this.showAlert();
+    
       }
 
    updateStatus(key, status) {
     this.tasks.update(key, {Status: status});
-    this.showAlert();
+    
       }
 
 

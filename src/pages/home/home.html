@@ -10,7 +10,7 @@
     <ion-item *ngFor="let task of tasks | async">
       <p>{{task.name}}</p>
       <p>Available Parking:</p>
-       <input type="text" [(ngModel)]="task.amount" block>
+       <input type="number" [(ngModel)]="task.amount" block>
        <br>
        <button ion-button (click)="updateTask(task.$key, task.amount)" block icon-start> <ion-icon name="md-checkmark"></ion-icon>
         Update
